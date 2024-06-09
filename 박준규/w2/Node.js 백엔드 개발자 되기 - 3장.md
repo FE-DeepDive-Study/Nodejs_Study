@@ -84,7 +84,8 @@ const feed = (req, res) => {
 ## 3.4 동적으로 응답하기
 - 요청에 따라 동적으로 응답 내용 변경
 - 코드 예제:
-  ```javascript
+  
+```javascript
 const http = require("http");
 const url = require("url");
 const server= http.createServer((req, res) => {
@@ -120,7 +121,8 @@ http://localhost:3000/user?name=jk&age=1
 ## 3.5 라우터 리팩터링하기
 - 라우터 코드를 map을 사용해서 리팩터링해서 코드 구조 개선
 - 코드 예제:
-  ```javascript
+  
+```javascript
 const http = require("http");
 const url = require("url");
 
@@ -159,7 +161,7 @@ const urlMap = {
     "/user": user,
     "/feed": feed,
 }
-  ```
+```
 
 `urlMap` 이 `feed`, `notFound` 보다 아래 있는 이유는, `const` 로 선언한 변수들은 초기화 전에 읽을 수 없기 때문. 
 
@@ -191,6 +193,8 @@ let, const, 함수 표현식, 클래스 표현식은 undefined 초기화 전에 
 ### 3.6.1 익스프레스 설치하기
 - 익스프레스는 기본 라이브러리가 아님. 설치 필요.
 - npm으로 설치:
+
+
   ```bash
   $ mkdir chapter3
   $ cd chapter3
@@ -201,6 +205,8 @@ let, const, 함수 표현식, 클래스 표현식은 undefined 초기화 전에 
 
 ### 3.6.2 나의 첫 익스프레스 서버 만들기
 - 기본적인 익스프레스 서버 생성:
+
+
   ```javascript
 const express = require("express");
 const app = express();
@@ -216,6 +222,8 @@ app.get("/", (req, res) => {
 
 ### 3.6.3 Node.js 라이브러리로 만든 서버를 익스프레스로 구현하기
 - 기존 Node.js 서버 코드를 익스프레스로 변환:
+
+
   ```javascript
 const url = require("url");
 const express = require("express");
@@ -250,6 +258,8 @@ function feed(_, res) {
 ## 3.7 익스프레스로 간단한 API 서버 만들기
 - 익스프레스를 사용해 게시판 API 구현.
 - 게시판 API 작성 예제:
+
+
 ```javascript
 const express = require('express');
 const app = express();
