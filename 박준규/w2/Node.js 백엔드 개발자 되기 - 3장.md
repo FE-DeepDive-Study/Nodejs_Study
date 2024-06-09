@@ -207,7 +207,7 @@ let, const, 함수 표현식, 클래스 표현식은 undefined 초기화 전에 
 - 기본적인 익스프레스 서버 생성:
 
 
-  ```javascript
+```javascript
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -218,13 +218,13 @@ app.get("/", (req, res) => {
 }).listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 })
-  ```
+```
 
 ### 3.6.3 Node.js 라이브러리로 만든 서버를 익스프레스로 구현하기
 - 기존 Node.js 서버 코드를 익스프레스로 변환:
 
 
-  ```javascript
+```javascript
 const url = require("url");
 const express = require("express");
 const app = express();
