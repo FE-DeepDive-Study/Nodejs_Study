@@ -4,6 +4,8 @@
 ## 3.1 OK를 반환하는 서버 만들기
 - Node.js로 모든 요청에 "OK"를 반환하는 서버 구현
 - 코드 예제:
+
+
   ```javascript
   const http = require('http');
   const server = http.createServer((req, res) => {
@@ -16,7 +18,8 @@
 ## 3.2 라우터 만들기
 - 다양한 경로에 대한 요청을 처리하는 라우터 추가
 - 코드 예제:
-  ```javascript
+
+```javascript
 const http = require("http");
 const url = require("url");
 const server = http.createServer((req, res) => {
@@ -38,7 +41,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen("3000", () => console.log("서버 시작"));
-  ```
+```
 
 참고. URL 구조
 ![](attachment/18bfe4a806a28da5d13c9023b25cdf47.png)
@@ -46,7 +49,8 @@ server.listen("3000", () => console.log("서버 시작"));
 ## 3.3 createServer() 리팩터링하기
 - 코드 리팩터링으로 가독성과 유지보수성 향상
 - 코드 예제:
-  ```javascript
+
+```javascript
 const http = require("http");
 const url = require("url");
 const server= http.createServer((req, res) => {
@@ -74,7 +78,8 @@ const feed = (req, res) => {
     <li>pic3</li>
     </ul>`);
 };
-  ```
+
+```
 
 ## 3.4 동적으로 응답하기
 - 요청에 따라 동적으로 응답 내용 변경
