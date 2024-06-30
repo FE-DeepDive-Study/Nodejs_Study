@@ -133,7 +133,7 @@ npm install class-validator class-transformer
 - `class-validator` 데코레이터를 사용하여 유효성 규칙을 정의.
     - 다양한 규칙 제공하고 있음
 
-  ```typescript
+```typescript
   import { IsEmail, IsString } from 'class-validator';
 
   export class CreateUserDto {
@@ -144,8 +144,8 @@ npm install class-validator class-transformer
     password: string;
 
 // 중략
-  }
-  ```
+}
+```
 
 ### 10.3.3 테스트하기
 - DTO와 ValidationPipe 설정이 제대로 작동하는지 확인하기 위해 테스트 코드를 작성함.
